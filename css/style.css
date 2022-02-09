@@ -223,13 +223,22 @@ footer a {
   animation-duration: 1.5s;
 
   animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  animation-fill-mode: backwards;
+  animation-timing-function: ease-in-out;
 }
 .up-arrow:hover {
   color: white;
 }
-
+.up-arrow::after {
+  background-color: red;
+  content: "";
+  border-radius: 50%;
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  top: 100px;
+  /* z-index: 2000; */
+  display: block;
+}
 @keyframes puls {
   0% {
     box-shadow: 0px 0px 0px 0px;
