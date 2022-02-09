@@ -1,0 +1,243 @@
+/* background-color: lightblue; */
+body {
+  font-family: "Cairo", sans-serif;
+}
+p {
+  direction: rtl;
+}
+
+.header {
+  background: #04309b;
+  font-weight: 700;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.header-logo,
+.logo-animation {
+  animation-name: logo-up-down;
+
+  animation-duration: 1.5s;
+  position: relative;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-fill-mode: backwards;
+}
+@keyframes logo-up-down {
+  0% {
+    top: -10px;
+  }
+  50% {
+    top: 10px;
+  }
+  100% {
+    top: -10px;
+  }
+}
+.header b {
+  color: #97cf30;
+}
+
+.header i.fas.fa-phone {
+  transform: rotateZ(100deg);
+}
+/* ========================================= */
+.sec-info p {
+  direction: rtl;
+  line-height: 2rem;
+}
+.img-logo img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.sec-info::after {
+  content: "";
+  display: block;
+  background: #ddd;
+  width: 90%;
+  height: 1px;
+  margin: auto;
+}
+
+/* ========================================= */
+.single-service {
+  position: relative;
+  border: 2px solid #02adf51f;
+  border-radius: 5px;
+  padding: 15px;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s all;
+  cursor: pointer;
+}
+.services i {
+  /* border: 1px solid #02adf5; */
+  color: #02adf5;
+  background: white;
+  border-radius: 50%;
+  font-size: 20px;
+  padding: 16px;
+  text-align: center;
+  transition: 0.5s all;
+  position: inherit;
+}
+.single-service .icon-overlay {
+  overflow: hidden;
+  width: 15%;
+  height: 56px;
+  position: absolute;
+  top: -40px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #02adf5;
+  border-radius: 50%;
+}
+@media only screen and (max-width: 768px) {
+  .single-service .icon-overlay {
+    width: 30%;
+  }
+  .single-service {
+    height: 395px;
+  }
+}
+.single-service:hover i.overlay {
+  top: 0px;
+}
+
+.single-service:hover {
+  border: 2px solid #02adf5;
+}
+.single-service i.overlay {
+  border: 1px solid #02adf5;
+  color: white;
+  background: #02adf5;
+  top: -95px;
+  transition: 0.5s all;
+}
+
+.services h1::after {
+  display: block;
+  content: "";
+  background: #333;
+  width: 10%;
+  height: 2px;
+  margin: 10px auto;
+  transition: 0.5s all;
+}
+/*=====================================*/
+.manager-card {
+  border: 1px solid rgb(4, 48, 155);
+  padding: 20px;
+  border-radius: 8px;
+  background: white;
+  box-shadow: 14px 18px 13px #0000002b;
+  margin-bottom: 50px;
+}
+.manager-sec img {
+  width: 250px;
+  background: red;
+  border-radius: 50%;
+  height: 250px;
+  object-fit: contain;
+}
+
+.manager-sec img {
+  width: 250px;
+  background: #3333;
+  border-radius: 50%;
+  height: 250px;
+  object-fit: contain;
+}
+
+.manager-sec img {
+  width: 250px;
+  background: white;
+  border-radius: 50%;
+  height: 250px;
+  object-fit: contain;
+  border: 1px solid #33333314;
+  box-shadow: 17px 19px 16px #dddd;
+}
+.cotact-us {
+  background-color: #02adf5;
+}
+.cotact-us h1::after {
+  content: "";
+  display: block;
+  width: 10%;
+  height: 2px;
+  background: white;
+  margin: 15px auto;
+}
+.contact {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.contact a {
+  text-align: center;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  justify-content: center;
+  box-shadow: 6px 6px 7px #00000087;
+}
+.contact a i {
+  font-size: 30px;
+}
+
+.contact .facbook {
+  background-color: #3b5998;
+}
+.contact .whatsapp {
+  background-color: #4fce5d;
+}
+.contact .gmail {
+  background-color: #db4a39;
+}
+
+footer a {
+  margin-right: 10px;
+}
+.up-arrow {
+  position: fixed;
+  color: white;
+  background-color: rgb(4, 48, 155);
+  border-radius: 50%;
+  font-size: 30px;
+  padding: 5px 10px;
+  display: block;
+  z-index: 20;
+  right: 0;
+  bottom: 3px;
+  animation-name: puls;
+
+  animation-duration: 1.5s;
+
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-fill-mode: backwards;
+}
+.up-arrow:hover {
+  color: white;
+}
+
+@keyframes puls {
+  0% {
+    box-shadow: 0px 0px 0px 0px;
+  }
+  50% {
+    box-shadow: rgb(4 48 155) 0px 0px 1px 1px;
+  }
+  100% {
+    box-shadow: rgb(4 48 155) 0px 0px 12px 3px;
+  }
+}
