@@ -216,8 +216,8 @@ footer a {
   padding: 5px 10px;
   display: block;
   z-index: 20;
-  right: 0;
-  bottom: 3px;
+  right: 10px;
+  bottom: 10px;
   animation-name: puls;
 
   animation-duration: 1.5s;
