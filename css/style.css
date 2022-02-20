@@ -74,7 +74,6 @@ p {
   cursor: pointer;
 }
 .services i {
-  /* border: 1px solid #02adf5; */
   color: #02adf5;
   background: white;
   border-radius: 50%;
@@ -82,44 +81,50 @@ p {
   padding: 16px;
   text-align: center;
   transition: 0.5s all;
-  position: inherit;
-}
-.single-service .icon-overlay {
-  overflow: hidden;
-  width: 15%;
-  height: 56px;
-  position: absolute;
-  top: -40px;
-  margin: auto;
+  right: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #02adf5;
+}
+.single-service .icon-overlay {
+  overflow: hidden;
+  width: 55px;
+  height: 55px;
+  position: absolute;
+  top: -40px;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  border: 1px solid #02adf5;
   border-radius: 50%;
 }
 @media only screen and (max-width: 768px) {
-  .single-service .icon-overlay {
+  /* .single-service .icon-overlay {
     width: 30%;
-  }
+  } */
   .single-service {
     height: 395px;
   }
 }
 .single-service:hover i.overlay {
-  top: 0px;
+  transform: translateY(100%);
 }
 
 .single-service:hover {
   border: 2px solid #02adf5;
 }
 .single-service i.overlay {
-  border: 1px solid #02adf5;
+  position: absolute;
   color: white;
   background: #02adf5;
-  top: -95px;
+  top: -100%;
+  left: 0;
+  right: 0;
   transition: 0.5s all;
 }
-
 .services h1::after {
   display: block;
   content: "";
@@ -131,38 +136,23 @@ p {
 }
 /*=====================================*/
 .manager-card {
-  border: 1px solid rgb(4, 48, 155);
+  border: 1px solid #ddd;
   padding: 20px;
   border-radius: 8px;
   background: white;
-  box-shadow: 14px 18px 13px #0000002b;
+  box-shadow: 0 0 10px #ddd;
   margin-bottom: 50px;
 }
 .manager-sec img {
   width: 250px;
-  background: red;
-  border-radius: 50%;
-  height: 250px;
-  object-fit: contain;
-}
-
-.manager-sec img {
-  width: 250px;
-  background: #3333;
-  border-radius: 50%;
-  height: 250px;
-  object-fit: contain;
-}
-
-.manager-sec img {
-  width: 250px;
   background: white;
   border-radius: 50%;
   height: 250px;
   object-fit: contain;
-  border: 1px solid #33333314;
-  box-shadow: 17px 19px 16px #dddd;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px #ddd;
 }
+
 .cotact-us {
   background-color: #02adf5;
 }
